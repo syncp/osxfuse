@@ -12,15 +12,23 @@
 
 /* File system name */
 
-#define OSXFUSE_NAME_LITERAL                osxfuse
-#define OSXFUSE_DISPLAY_NAME_LITERAL        OSXFUSE
+#ifndef OSXFUSE_NAME_LITERAL
+  #define OSXFUSE_NAME_LITERAL              osxfuse
+#endif
+
+#ifndef OSXFUSE_DISPLAY_NAME_LITERAL
+  #define OSXFUSE_DISPLAY_NAME_LITERAL      OSXFUSE
+#endif
 
 #define OSXFUSE_NAME                        FUSE_PP_STRINGIFY(OSXFUSE_NAME_LITERAL)
 #define OSXFUSE_DISPLAY_NAME                FUSE_PP_STRINGIFY(OSXFUSE_DISPLAY_NAME_LITERAL)
 
 /* Identifier */
 
-#define OSXFUSE_IDENTIFIER_LITERAL          com.github.osxfuse
+#ifndef OSXFUSE_IDENTIFIER_LITERAL
+  #define OSXFUSE_IDENTIFIER_LITERAL        com.github.osxfuse
+#endif
+
 #define OSXFUSE_BUNDLE_IDENTIFIER_LITERAL   OSXFUSE_IDENTIFIER_LITERAL.filesystems.OSXFUSE_NAME_LITERAL
 
 #define OSXFUSE_IDENTIFIER                  FUSE_PP_STRINGIFY(OSXFUSE_IDENTIFIER_LITERAL)

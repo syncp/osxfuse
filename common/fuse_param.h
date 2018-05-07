@@ -58,7 +58,20 @@
         #define M_OSXFUSE_ENABLE_BIG_LOCK               1
 
         #define M_OSXFUSE_ENABLE_LOCK_LOGGING           0
+
+        #define M_OSXFUSE_ENABLE_STATIC_LOGMSG          1
+
+        #define M_OSXFUSE_UNBLOCKED_READ                1
+        #if M_OSXFUSE_UNBLOCKED_READ
+
+            #define M_OSXFUSE_SHARED_NODELOCK           1
+            #define M_OSXFUSE_ENABLE_AUX_FSNODE_LOCK    1
+            #define M_OSXFUSE_ENABLE_AUX_LOCK_LOGGING   0
+
+        #endif
+
     #endif /* M_OSXFUSE_ENABLE_INTERIM_FSNODE_LOCK */
+
 
 #endif /* KERNEL */
 

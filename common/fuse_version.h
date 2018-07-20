@@ -1,14 +1,14 @@
 /*
  * Copyright (c) 2006-2008 Amit Singh/Google Inc.
  * Copyright (c) 2010 Tuxera Inc.
- * Copyright (c) 2011-2016 Benjamin Fleischer
+ * Copyright (c) 2011-2018 Benjamin Fleischer
  * All rights reserved.
  */
 
 #ifndef _FUSE_VERSION_H_
 #define _FUSE_VERSION_H_
 
-#include <fuse_preprocessor.h>
+#include "fuse_preprocessor.h"
 
 /* File system name */
 
@@ -36,7 +36,7 @@
 
 /* Version */
 
-#define OSXFUSE_VERSION_LITERAL             3.7.1
+#define OSXFUSE_VERSION_LITERAL             3.8.2
 #define OSXFUSE_TIMESTAMP                   __DATE__ ", " __TIME__
 
 #define OSXFUSE_VERSION                     FUSE_PP_STRINGIFY(OSXFUSE_VERSION_LITERAL)

@@ -126,4 +126,14 @@
  */
 #define FUSE_PP_CAT(...) FUSE_PP_OVERLOAD(FUSE_PP_CAT_, __VA_ARGS__)(__VA_ARGS__)
 
+/*
+ * Helper macros to implement blocks with prefix and postfix actions
+ */
+#define FUSE_PP_WITH_PREFIX()                             for (int FUSE_PP_UID(__LINE__) = 1; FUSE_PP_UID(__LINE__);)
+#define FUSE_PP_WITH_SUFFIX()                             for (; FUSE_PP_UID(__LINE__); FUSE_PP_UID(__LINE__) = 0)
+#define FUSE_PP_WITH_ACTION(PREACTION, /*POSTACTION*/...) for (PREACTION; FUSE_PP_UID(__LINE__); /*POSTACTION*/__VA_ARGS__)
+
+#define FUSE_PP_UID(LINE) FUSE_PP_UID_HELPER(LINE)
+#define FUSE_PP_UID_HELPER(LINE) fuse_pp_uid_ ## LINE
+
 #endif /* _FUSE_PREPROCESSOR_H_ */

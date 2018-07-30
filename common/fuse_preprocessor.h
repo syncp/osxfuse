@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2015 Benjamin Fleischer
+ * Copyright (c) 2018 Syncplicity by Axway
  * All rights reserved.
  */
 
